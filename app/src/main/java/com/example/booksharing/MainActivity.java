@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Button login;
     FirebaseAuth fblauth;
     ProgressDialog progress;
+     Button  btnScanBarcode;  
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +34,16 @@ public class MainActivity extends AppCompatActivity {
         fblauth=FirebaseAuth.getInstance();
         FirebaseUser user=fblauth.getCurrentUser();
         progress=new ProgressDialog(this);
+        
+        // added for qrcode
+                btnScanBarcode = findViewById(R.id.btnScanBarcode);  
+  
+        btnScanBarcode.setOnClickListener(new View.OnClickListener() {  
+            @Override  
+            public void onClick(View view) {  
+                startActivity(new Intent(MainActivity.this, ScannedBarcodeActivity.class));  
+            }  
+        });  
         //FUNCTION DISABLED (FUNCTION IS FOR EVERYTIME LOGIN SOLVED)
         /*if(user!=null)
         {
