@@ -13,7 +13,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class forgotpass extends AppCompatActivity {
+public class Forgotpass extends AppCompatActivity {
 
     EditText resetemail;
     Button resetsubmit;
@@ -31,7 +31,7 @@ public class forgotpass extends AppCompatActivity {
         String email=resetemail.getText().toString().trim();
         if(email.equals(""))
         {
-            Toast.makeText(forgotpass.this,"Please Enter Your Registred Email id",Toast.LENGTH_SHORT).show();
+            Toast.makeText(Forgotpass.this,"Please Enter Your Registred Email id",Toast.LENGTH_SHORT).show();
         }
         else
         {
@@ -40,13 +40,13 @@ public class forgotpass extends AppCompatActivity {
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful())
                     {
-                        Toast.makeText(forgotpass.this,"Password Reset Link Sent",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Forgotpass.this,"Password Reset Link Sent",Toast.LENGTH_SHORT).show();
                         finish();
-                        startActivity(new Intent(forgotpass.this,MainActivity.class));
+                        startActivity(new Intent(Forgotpass.this,MainActivity.class));
                     }
                     else
                     {
-                        Toast.makeText(forgotpass.this,"Email ID not Registered",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Forgotpass.this,"Email ID not Registered",Toast.LENGTH_SHORT).show();
                     }
                 }
             });
