@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/apiCaller"
+        android:title="ApiCaller"
+        android:icon="@drawable/ic_action_api"
+        />
+    <item
+        android:id="@+id/qr_scanner"
+        android:title="QR Scanner"
+        android:icon="@drawable/ic_action_qr"
+        />
+</menu>
