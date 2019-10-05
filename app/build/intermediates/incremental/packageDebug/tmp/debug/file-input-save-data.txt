@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Sat Oct 05 13:19:27 IST 2019
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\Tushar Gaurabh Jha\\Documents\\gitRepo\\Android-Java-Hacktoberfest-2019\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+0.path=classes.dex
+0.set=DEX
+count=1
