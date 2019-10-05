@@ -4,4 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".homepage"/>
+    tools:context=".homepage">
+
+    <GridView
+        android:id="@+id/simpleGridView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:footerDividersEnabled="false"
+        android:numColumns="2"
+        android:padding="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
