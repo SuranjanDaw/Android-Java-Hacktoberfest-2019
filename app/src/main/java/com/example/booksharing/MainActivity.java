@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         btnScanBarcode.setOnClickListener(new View.OnClickListener() {  
             @Override  
             public void onClick(View view) {  
-                startActivity(new Intent(MainActivity.this, ScannedBarcodeActivity.class));  
+                startActivity(new Intent(MainActivity.this, QRcodeActivity.class));  
             }  
         });  
         //FUNCTION DISABLED (FUNCTION IS FOR EVERYTIME LOGIN SOLVED)
