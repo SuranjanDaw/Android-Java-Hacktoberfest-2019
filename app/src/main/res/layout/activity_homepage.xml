@@ -6,6 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".Homepage">
 
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/posts_by_user_1"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin_top"
+        android:text="@string/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header_text" />
+
+    <TextView
+        android:id="@+id/title_value"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title_text"
+        tools:text="Some Title" />
+
+    <TextView
+        android:id="@+id/body_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_fifty"
+        android:text="@string/body"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title_text" />
+
+    <TextView
+        android:id="@+id/body_value"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/body_text"
+        tools:text="Body Text"/>
+
     <android.support.design.widget.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
