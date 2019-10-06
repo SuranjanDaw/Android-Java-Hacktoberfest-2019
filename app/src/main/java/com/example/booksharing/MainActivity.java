@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         /*if(user!=null)
         {
             finish();
-            startActivity(new Intent(MainActivity.this,Homepage.class));
+            startActivity(new Intent(MainActivity.this,homepage.class));
         }*/
     }
 
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         progress.dismiss();
                         Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(MainActivity.this, Homepage.class));
+                        startActivity(new Intent(MainActivity.this, homepage.class));
                     } else {
                         progress.dismiss();
                         Toast.makeText(MainActivity.this, "Wrong Credentials", Toast.LENGTH_SHORT).show();
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
             finish();
-            startActivity(new Intent(MainActivity.this, Homepage.class));
+            startActivity(new Intent(MainActivity.this, homepage.class));
         } catch (ApiException e) {
             Log.w("Google Sign-In Error", "signInResult:failed code=" + e.getStatusCode());
             Toast.makeText(MainActivity.this, "Failed", Toast.LENGTH_SHORT).show();
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if (account != null) {
             finish();
-            startActivity(new Intent(MainActivity.this, Homepage.class));
+            startActivity(new Intent(MainActivity.this, homepage.class));
         }
         super.onStart();
     }
