@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".QR_ScanFragment">
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".QR_ScanFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="QR Scanner"
-        android:gravity="center"
-        android:layout_centerInParent="true"
-        android:textSize="28sp"/>
+	<!-- TODO: Update blank fragment layout -->
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_centerInParent="true"
+		android:gravity="center"
+		android:text="@string/qr_scanner"
+		android:textSize="28sp" />
 
 </RelativeLayout>

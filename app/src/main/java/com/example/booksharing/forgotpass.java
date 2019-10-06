@@ -5,7 +5,6 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -15,44 +14,37 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class forgotpass extends AppCompatActivity {
 
-    EditText resetemail;
-    Button resetsubmit;
-    FirebaseAuth fbauth;
+    private EditText resetEmail;
+    private FirebaseAuth fbAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgotpass);
-        resetemail=(EditText)findViewById(R.id.forem);
-        resetsubmit=(Button)findViewById(R.id.bu5);
-        fbauth=FirebaseAuth.getInstance();
+
+        resetEmail = findViewById(R.id.forem);
+        fbAuth = FirebaseAuth.getInstance();
     }
 
-    public void buonclick5(View view) {
-        String email=resetemail.getText().toString().trim();
-        if(email.equals(""))
-        {
-            Toast.makeText(forgotpass.this,"Please Enter Your Registred Email id",Toast.LENGTH_SHORT).show();
+    public void forgotPass(View view) {
+        String email = resetEmail.getText().toString().trim();
+        if (email.isEmpty()) {
+            Toast.makeText(forgotpass.this, "Please Enter Your Registred Email id", Toast.LENGTH_SHORT).show();
         }
-        else
-        {
-            fbauth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+        else {
+            fbAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
-                    if(task.isSuccessful())
-                    {
-                        Toast.makeText(forgotpass.this,"Password Reset Link Sent",Toast.LENGTH_SHORT).show();
+                    if (task.isSuccessful()) {
+                        Toast.makeText(forgotpass.this, "Password Reset Link Sent", Toast.LENGTH_SHORT).show();
                         finish();
-                        startActivity(new Intent(forgotpass.this,MainActivity.class));
+                        startActivity(new Intent(forgotpass.this, MainActivity.class));
                     }
-                    else
-                    {
-                        Toast.makeText(forgotpass.this,"Email ID not Registered",Toast.LENGTH_SHORT).show();
+                    else {
+                        Toast.makeText(forgotpass.this, "Email ID not Registered", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
         }
-
-
-
     }
 }
