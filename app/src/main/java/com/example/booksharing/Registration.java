@@ -16,7 +16,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 
-public class registration extends AppCompatActivity {
+public class Registration extends AppCompatActivity {
 
     public EditText name;
     public EditText email;
@@ -58,13 +58,13 @@ public class registration extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful())
                     {
-                      Toast.makeText(registration.this,"Successfully Registered",Toast.LENGTH_SHORT).show();
-                      startActivity(new Intent(registration.this,MainActivity.class));
+                      Toast.makeText(Registration.this,"Successfully Registered",Toast.LENGTH_SHORT).show();
+                      startActivity(new Intent(Registration.this,MainActivity.class));
                     }
                     else
                     {
                         FirebaseAuthException e = (FirebaseAuthException )task.getException();
-                        Toast.makeText(registration.this, "Failed Registration: "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Registration.this, "Failed Registration: "+e.getMessage(), Toast.LENGTH_SHORT).show();
 
                     }
                 }
@@ -77,6 +77,6 @@ public class registration extends AppCompatActivity {
     }
 
     public void bu2(View view) {
-       startActivity(new Intent(registration.this,MainActivity.class));
+       startActivity(new Intent(Registration.this,MainActivity.class));
     }
 }
