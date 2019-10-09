@@ -3,4 +3,138 @@
     <color name="colorPrimary">#CFF5108A</color>
     <color name="colorPrimaryDark">#F206F2</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorWhite">#ffffff</color>
+    
+    <color name="colorwh">#fff</color>
+    <color name="blue">#0067A1</color>
+
+    <color name="background">#e5e5e5</color>
+    <color name="toolbar_color">#00695C</color>
+    <color name="grey_200">#66cccccc</color>
+    <color name="grey_100">#33cccccc</color>
+
+    <color name="light_green">#00ff00</color>
+    <color name="white">#ffffff</color>
+    <color name="white_transparent">#A6ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="light_grey">#cccccc</color>
+    <color name="orange">#e8af21</color>
+    <!-- orange -->
+    <color name="lightest_grey">#F2F2F2</color>
+    <color name="dark_reg_button">#ba8c1a</color>
+    <color name="smart_message_color">#cd802b</color>
+    <color name="dark_blue_texts">#43609C</color>
+
+    <!--Used in Redemption History Item! Check the Color-->
+    <color name="light_orange">#e8b535</color>
+    <color name="darker_green">#619A2F</color>
+    <color name="less_dark_green">#8EBD3D</color>
+
+    <color name="dark_orange_button">#C57829</color>
+    <color name="light_orange_button">#D07D2B</color>
+
+    <color name="dark_green">#619A2F</color>
+    <color name="tabs_scroll_color">#FFFFFF</color>
+
+    <color name="trans_green">#c0619A2F</color>
+    <color name="trans_orange">#c0e8af21</color>
+
+    <color name="card_root_background">#EFEFF4</color>
+
+    <color name="trans_comfort">#c0e4af23</color>
+    <color name="trans_posh_retreat">#c00d186e</color>
+    <color name="trans_secret_shapes">#c0f1cb66</color>
+    <color name="trans_corporate">#c0194e9a</color>
+    <color name="trans_bargain_break">#c03ab54a</color>
+
+    <color name="trans_orange_med">#B3e8af21</color>
+    <color name="trans_orange_anim">#B3B19A1A</color>
+
+    <color name="black_new">#373737</color>
+
+    <color name="grey_new">#555555</color>
+
+    <color name="trans_orange_extra">#4De8af21</color>
+
+    <!-- text colors , Add if you find-->
+
+    <color name="text_grey1">#BDBEBF</color>
+    <!-- used on fb login screen -->
+
+    <color name="text_grey">#BFBFBF</color>
+    <color name="dark_grey_text">#828282</color>
+    <color name="dark_grey_text_2">#aaa</color>
+    <color name="dark_grey_text_trans">#88000000</color>
+    <color name="text_filter_orange">#e8af21</color>
+    <color name="filter_bg">#f7f7f7</color>
+    <color name="light_red">#EE711E</color>
+
+    <color name="line_color">#66BFBFBF</color>
+
+    <color name="black_text">#3A3A39</color>
+
+    <color name="text_black">#666867</color>
+
+    <color name="reg_sub_text">#ADA49D</color>
+    <color name="editbox_help_text">#E6E1DC</color>
+
+    <!-- button colors -->
+    <color name="left_btn">#D07D2B</color>
+    <color name="right_btn">#C57829</color>
+
+
+    <color name="crownpass_close_btn">#e9b01a</color>
+
+    <color name="crownpass_btn">#ebc00d</color>
+
+    <color name="rating_text">#E5E5E4</color>
+    <color name="green_review">#33a9d056</color>
+
+    <color name="toolbar_label">#FBFCFA</color>
+
+    <color name="grey_bg">#e5e5e5</color>
+
+    <color name="green">#00FF00</color>
+
+    <color name="red">#FF0000</color>
+
+    <color name="dark_red">#930808</color>
+
+    <color name="mb_processing_orange">#e8ad22</color>
+
+    <color name="mb_cancelled_red">#fc575b</color>
+
+    <color name="skyBlue">#6892fa</color>
+    <color name="darkGreen">#05522c</color>
+
+    <!-- $$$$$$$$$$$$$$$$$$$ Final Colors $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+
+    <color name="list_item_main_text">#1a1a1a</color>
+    <color name="list_item_secondary_text">#7f7f7f</color>
+
+    <color name="g1">#4D619A2F</color>
+    <color name="g2">#8C619A2F</color>
+    <color name="g3">#BF619A2F</color>
+    <color name="g4">#E6619A2F</color>
+    <color name="green1">#5cb85c</color>
+
+    <color name="my_notif_color">#64a145</color>
+
+    <color name="trans_black">#80000000</color>
+    <color name="trans_black_light">#22000000</color>
+
+
+    <color name="lottery_prize_text_color">#619a2f</color>
+    <color name="lottery_prize_texthead_color">#8a8989</color>
+
+    <color name="recharge_grey_line">#a4a4a4</color>
+
+    <color name="black">#000000</color>
+    <color name="light_black">#66000000</color>
+    <color name="colorgray">#cacac5</color>
+    <color name="lyt_gray">#FFDFDADA</color>
+    <color name="colorBlue">#6892fa</color>
+    <color name="grayy">#747471</color>
+    <color name="colorgreen">#4a9e28</color>
+
 </resources>
