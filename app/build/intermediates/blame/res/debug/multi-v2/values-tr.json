@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Tushar Gaurabh Jha\\Documents\\gitRepo\\Android-Java-Hacktoberfest-2019\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-tr\\values-tr.xml",
+            "outputFile": "G:\\ProjectGithub\\Android-Java-Hacktoberfest-2019\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-tr\\values-tr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Tushar Gaurabh Jha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.2.0.aar\\1be30962ae5c85bba2b5ed51b406850f\\res\\values-tr\\values.xml",
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\6597fe865f7178a2fac9b4ea7de6c4a0\\core-1.0.0\\res\\values-tr\\values-tr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "48",
+                        "startColumns": "4",
+                        "startOffsets": "5605",
+                        "endColumns": "100",
+                        "endOffsets": "5701"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\b87d202d29ef88c0ef23772ef033efd2\\jetified-play-services-basement-17.0.0\\res\\values-tr\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Tushar Gaurabh Jha\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\a0ccb0908c379ba9bb7470e7a76e3238\\res\\values-tr\\values-tr.xml",
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\065afe7f2cbe7ab96c73dc66e79a1311\\appcompat-1.0.0\\res\\values-tr\\values-tr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Tushar Gaurabh Jha\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\89a86912e7487206f706e45ca0c0d1d2\\res\\values-tr\\values.xml",
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-2\\files-2.1\\9aa43e4d859846d255e0c2916968f517\\play-services-base-17.0.0\\res\\values-tr\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,23 +69,6 @@
                         "startOffsets": "2786,2898,3085,3223,3330,3536,3668,3825,4166,4397,4506,4694,4830,5034,5231,5323,5417",
                         "endColumns": "111,186,137,106,205,131,156,134,230,108,187,135,203,196,91,93,108",
                         "endOffsets": "2893,3080,3218,3325,3531,3663,3820,3955,4392,4501,4689,4825,5029,5226,5318,5412,5521"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Tushar Gaurabh Jha\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\026094d89a2cba22e13a665030a6b7ce\\res\\values-tr\\values-tr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "5605",
-                        "endColumns": "100",
-                        "endOffsets": "5701"
                     }
                 }
             ]

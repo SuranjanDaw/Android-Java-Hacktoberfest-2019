@@ -2,6 +2,7 @@ package com.example.booksharing;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -26,7 +28,10 @@ public class Forgotpass extends AppCompatActivity {
         resetemail=(EditText)findViewById(R.id.forem);
         resetsubmit=(Button)findViewById(R.id.bu5);
         fbauth=FirebaseAuth.getInstance();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
+
 
     public void buonclick5(View view) {
         String email=resetemail.getText().toString().trim();
@@ -53,7 +58,16 @@ public class Forgotpass extends AppCompatActivity {
             });
         }
 
+    }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
