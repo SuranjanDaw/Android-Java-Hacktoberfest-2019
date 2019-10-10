@@ -1243,9 +1243,11 @@ id enterAlways
 id enterAlwaysCollapsed
 id etlname
 id etlpassword
+id etlpasswordlay
 id etremail
 id etrname
 id etrpassword
+id etrpasswordlay
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
