@@ -4,7 +4,8 @@
 <item android:id="@+id/logoutmenu" android:icon="@drawable/menu2" android:orderInCategory="100"
     app:showAsAction="never" android:title="Logout">
 </item>
-    <item android:id="@+id/profilemenu" android:icon="@drawable/menu2" android:orderInCategory="200"
+    <item
+		android:icon="@drawable/menu2" android:orderInCategory="200"
         app:showAsAction="never" android:title="Settings">
     </item>
 </menu>

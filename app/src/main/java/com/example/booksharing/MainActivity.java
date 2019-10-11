@@ -27,11 +27,11 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    int RC_SIGN_IN = 0;
+    private final int RC_SIGN_IN = 0;
     EditText name;
     EditText password;
     Button login;
-    FirebaseAuth fblauth;
+    FirebaseAuth fbAuth;
     ProgressDialog progress;
     SignInButton signInButton;
     GoogleSignInClient mGoogleSignInClient;
@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         name =  findViewById(R.id.etlname);
         password =  findViewById(R.id.etlpassword);
         login =  findViewById(R.id.busubmit);
-        fblauth = FirebaseAuth.getInstance();
-        FirebaseUser user = fblauth.getCurrentUser();
+        fbAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = fbAuth.getCurrentUser();
         progress = new ProgressDialog(this);
         signInButton = findViewById(R.id.google_signin);
 
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         /*if(user!=null)
         {
             finish();
-            startActivity(new Intent(MainActivity.this,homepage.class));
+            startActivity(new Intent(MainActivity.this,HomePageActivity.class));
         }*/
     }
 
@@ -82,13 +82,13 @@ public class MainActivity extends AppCompatActivity {
         } else {
             progress.setMessage("Please Wait!");
             progress.show();
-            fblauth.signInWithEmailAndPassword(n1, p1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            fbAuth.signInWithEmailAndPassword(n1, p1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         progress.dismiss();
                         Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(MainActivity.this, homepage.class));
+                        startActivity(new Intent(MainActivity.this, HomePageActivity.class));
                     } else {
                         progress.dismiss();
                         Toast.makeText(MainActivity.this, "Wrong Credentials", Toast.LENGTH_SHORT).show();
@@ -99,9 +99,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //Goto Registration page
+    //Goto RegistrationActivity page
     public void bu4(View view) {
-        startActivity(new Intent(MainActivity.this, Registration.class));
+        startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
     }
 
     @Override
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
             finish();
-            startActivity(new Intent(MainActivity.this, homepage.class));
+            startActivity(new Intent(MainActivity.this, HomePageActivity.class));
         } catch (ApiException e) {
             Log.w("Google Sign-In Error", "signInResult:failed code=" + e.getStatusCode());
             Toast.makeText(MainActivity.this, "Failed", Toast.LENGTH_SHORT).show();
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
     //goto password reset link page
     public void forgot(View view) {
-        startActivity(new Intent(MainActivity.this, Forgotpass.class));
+        startActivity(new Intent(MainActivity.this, ForgotPassActivity.class));
     }
 
     @Override
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if (account != null) {
             finish();
-            startActivity(new Intent(MainActivity.this, homepage.class));
+            startActivity(new Intent(MainActivity.this, HomePageActivity.class));
         }
         super.onStart();
     }

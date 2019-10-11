@@ -28,9 +28,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class homepage extends AppCompatActivity {
+public class HomePageActivity extends AppCompatActivity {
+
     GoogleSignInClient mGoogleSignInClient;
-    FirebaseAuth fbauth;
+    FirebaseAuth fbAuth;
     private TextView titleField;
     private TextView bodyField;
 
@@ -44,7 +45,7 @@ public class homepage extends AppCompatActivity {
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(homepage.this);
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(HomePageActivity.this);
         if (acct != null) {
             String personName = acct.getDisplayName();
             String personGivenName = acct.getGivenName();
@@ -54,12 +55,11 @@ public class homepage extends AppCompatActivity {
             Uri personPhoto = acct.getPhotoUrl();
         }
 
-        fbauth = FirebaseAuth.getInstance();
+        fbAuth = FirebaseAuth.getInstance();
         BottomNavigationView navigationView = findViewById(R.id.btm_nav);
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
                 int id = menuItem.getItemId();
 
                 if (id == R.id.apiCaller) {
@@ -70,7 +70,7 @@ public class homepage extends AppCompatActivity {
 
                 }
                 if (id == R.id.qr_scanner) {
-                    QR_ScanFragment fragment = new QR_ScanFragment();
+                    QRScanFragment fragment = new QRScanFragment();
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frame_layout, fragment);
                     fragmentTransaction.commit();
@@ -78,7 +78,7 @@ public class homepage extends AppCompatActivity {
                 return true;
             }
         });
-        //The default fragment is home(apiCaller)
+
         navigationView.setSelectedItemId(R.id.apiCaller);
         makeNetworkCall();
     }
@@ -97,7 +97,7 @@ public class homepage extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Post>> call, Throwable t) {
-                Toast.makeText(homepage.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomePageActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -116,13 +116,10 @@ public class homepage extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.logoutmenu: {
-                fbauth.signOut();
-                finish();
-                startActivity(new Intent(homepage.this, MainActivity.class));
-
-            }
+        if (item.getItemId() == R.id.logoutmenu) {
+            fbAuth.signOut();
+            finish();
+            startActivity(new Intent(HomePageActivity.this, MainActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
