@@ -12,3 +12,6 @@ Create a new floder for your app.
 Comment on the PRs before working on it.
 
 Your PRs will be set invalid on failure to follow the above stated guidelines.
+
+
+Commit from 0604
